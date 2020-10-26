@@ -1,0 +1,104 @@
+:root{
+	--vermelho:#E50914;
+	--preto:#141414;
+}
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box; /*limite é a borda da caixa*/
+}
+
+body{
+	background: var(--preto);
+	font-family: Arial,"Times New Roman";
+	color: white;
+}
+
+header .logo{
+	color: var(--vermelho);
+	font-family: "Arial Black", Times;
+	font-size: 40px;
+	margin-left: 5px;
+}
+
+header nav a{
+	text-decoration: none;
+	color: #AAA;
+	margin-right: 10px;
+}
+
+/*quando o mouse estiver por cima fica diferente*/
+header nav a:hover{
+	color:#fff;
+}
+header .container{
+	display: flex; /*joga tudo em linha*/
+	align-items: center;
+	justify-content: space-between;
+}
+
+/*==========Filme principal==========*/
+.filme-principal{
+	font-size: 16px;
+	background: linear-gradient(rgba(0,0,0,.50),rgba(0,0,0,.50)100%), url("../img/grey-hound.jpg"); /*gradiente sempre utiliza mais de uma cor, camada fina de preto*/
+	
+	height: 400px;
+	background-size: cover;/*//fica do tamanho da caixa, altera o tamanho da imagem*/
+
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-content: flex-start;
+}
+
+/*os que herdão o flex box são as filhas diretas dela
+se houver div dentro das filhas, a div vai como block
+mas se tiver dentro das filhas <p> , <input> elas pegama as caracters*/ 
+
+.filme-principal .descricao{
+	margin-top: 10px;
+	margin-bottom: 40px;
+}
+
+.titulo{
+	margin-top: 15%;
+	font-size: 40px;
+	font-family: "Trebuchet MS", Arial;
+}
+
+.botao{
+	background-color: rgb(0,0,0,.50); /*cor cor,cor, alfa*/
+	border none;
+	color: white;
+
+	padding: 15px 30px;
+	margin-right: 15px;
+	font-size: 12px;
+
+	cursor:pointer; /*cursos muda usuario identificar que é algo clicavel*/
+	transition: 0.3s ease all;/*cuida da transição de uma animação para outra*/
+}
+
+/*propósito inverter as cores do botão quando passar por cima*/
+.botao:hover{
+	background-color: white;
+	color: black;
+}
+.botao i{
+	margin-right: 8px;
+}
+.container{
+	margin-left: 30px;
+}
+.filme-principal .container{
+	width: 70%; /*não pega toda a página e em telas menores ele não fica tomando tudo*/
+}
+
+.box-filme{
+	height: 100%;
+	width: 100%;
+	display: block;
+}
+.carrosel-filmes{
+	margin-top: 5px;
+}
